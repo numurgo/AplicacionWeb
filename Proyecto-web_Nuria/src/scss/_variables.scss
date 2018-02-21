@@ -1,0 +1,36 @@
+// Font families
+$main-font-family: "Cabin";
+$titles-font-family: "Roboto";
+$text-font-family: "Arial";
+
+// Font sizes
+$font-size-logo: 15px;
+$font-size-small: $font-size-logo - 3px;
+$font-size-large: $font-size-logo + 10px;
+$font-size-h1: $font-size-logo + 12px;
+$font-size-h2: $font-size-logo + 9px;
+$font-size-h3: $font-size-logo + 6px;
+$font-size-h4: $font-size-logo + 3px;
+$font-size-h5: $font-size-logo + 1px;
+$font-size-h6: $font-size-logo;
+
+// Base colors
+$navy-blue-dark: rgb(11, 17, 27);
+$navy-blue: #0F1626;
+$leather: #AB987A;
+$coral: #FF533D;
+$eggshell: whitesmoke; 
+$silver: #DBDBDB; 
+
+// Main components colors
+
+
+// Responsive
+// 667 iphone landscape. 768 ipad portrait
+$mobile-portrait-width: 414px;
+$mobile-landscape-width: 767px;
+$tablet-portrait-width: $mobile-landscape-width + 1;
+$tablet-landscape-width: 1024px;
+
+// Forms variables
+

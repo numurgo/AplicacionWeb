@@ -1,0 +1,56 @@
+
+.header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background: $navy-blue-dark;
+    color: $eggshell;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid;
+    border-bottom-color: $eggshell;
+       
+    .web-title {
+        display: flex;
+        font-family: $main-font-family;
+        font-size: $font-size-logo;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-right: 20px;
+        margin-left: 10px;
+         }
+        
+    .form-search {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        input {
+            border-radius: 5px;
+            width: 130px;
+            margin-right: 10px;
+        }
+            
+    }
+    
+    
+    .sign {
+        display: flex;
+        font-family: $main-font-family;
+        font-size: $font-size-small;
+        text-transform: uppercase;
+        margin-right: 5px;
+
+        span {
+            margin: 5px;
+        }
+    }
+
+}
+
+
+

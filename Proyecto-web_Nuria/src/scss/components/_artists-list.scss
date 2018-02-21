@@ -1,0 +1,42 @@
+
+.artists-list {
+   
+    .artist {
+        box-sizing: border-box;
+        width: calc(100% - 10px);
+        float: left;
+        padding: 10px;
+        margin: 10px 5px 15px 5px;
+        max-height: 450px;
+
+        .artist-nickname {
+            font-family: $main-font-family;
+            font-size: $font-size-h2;
+            color: $eggshell;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+
+        .artist-name {
+            font-family: $main-font-family;
+            font-size: $font-size-h5;
+            color: $leather;
+            margin-bottom: 4px;
+        }
+
+        .drawing {
+            width: 100%;
+            max-height: 380px;
+            
+        }
+
+        .area {
+            font-family: $main-font-family;
+            font-size: $font-size-small;
+            color: $coral;
+            margin-top: 2px;
+        }
+    }
+
+}
