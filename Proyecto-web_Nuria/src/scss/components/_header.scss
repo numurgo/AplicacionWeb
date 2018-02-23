@@ -22,8 +22,29 @@
         text-transform: uppercase;
         margin-right: 20px;
         margin-left: 10px;
-         }
+
+        @include if-desktop {
+            margin-left: 15px;
+        }
+        }
         
+    .links {
+        display: none;
+        font-family: $main-font-family;
+        font-size: $font-size-small;
+        text-transform: uppercase;
+        margin: 10px;
+
+        span{
+           margin-right: 20px;
+        }
+
+        @include if-desktop {
+            display: flex;
+        }
+    }
+
+
     .form-search {
         display: flex;
         justify-content: flex-end;
@@ -32,9 +53,26 @@
         input {
             border-radius: 5px;
             width: 130px;
-            margin-right: 10px;
+            margin-right: 5px;
+        }
+
+        @include if-mobile-landscape {
+            input {
+                width: 180px;
+            }
         }
             
+        @include if-desktop {
+            input {
+                width: 250px;
+            }
+        }
+
+        @include if-desktop-plus {
+            input {
+                width: 320px;
+            }
+        }
     }
     
     
@@ -47,6 +85,10 @@
 
         span {
             margin: 5px;
+        }
+
+        @include if-desktop {
+            margin-right: 15px;
         }
     }
 

@@ -1,6 +1,6 @@
 
 .artists-list {
-   
+
     .artist {
         box-sizing: border-box;
         width: calc(100% - 10px);
@@ -9,12 +9,40 @@
         margin: 10px 5px 15px 5px;
         max-height: 450px;
 
+        @include if-mobile-landscape {
+            width: calc(50% - 10px);
+            max-width: 740px;
+            max-height: 430px;
+            padding: 3%;
+        }
+
+        @include if-desktop {
+            width: calc(33% - 10px);
+            max-height: 520px;
+            padding: 10px;
+        }
+        
+        @include if-desktop-plus {
+            width: calc(25% - 10px);
+            max-height: 600px;
+            padding: 10px;
+        }
+
+
         .artist-nickname {
             font-family: $main-font-family;
             font-size: $font-size-h2;
             color: $eggshell;
             text-transform: uppercase;
             margin-bottom: 5px;
+
+            @include if-mobile-landscape {
+                font-size: $font-size-h1;
+            }
+
+            @include if-desktop {
+                margin-bottom: 10px;
+            }
         }
 
 
@@ -23,11 +51,34 @@
             font-size: $font-size-h5;
             color: $leather;
             margin-bottom: 4px;
+
+            @include if-mobile-landscape {
+                font-size: $font-size-h4;
+            }
+
+            @include if-desktop {
+                margin-bottom: 10px;
+            }
         }
 
         .drawing {
             width: 100%;
+            max-width: 300px;
             max-height: 380px;
+
+            @include if-mobile-landscape {
+                max-height: 350px;
+                max-width: 320px;
+            }
+
+            @include if-desktop {
+                max-height: 370px;
+            }
+
+            @include if-desktop-plus {
+                max-height: 370px;
+                padding: 5px;
+            }
             
         }
 
@@ -36,6 +87,10 @@
             font-size: $font-size-small;
             color: $coral;
             margin-top: 2px;
+
+            @include if-mobile-landscape {
+                font-size: $font-size-h5;
+            }
         }
     }
 

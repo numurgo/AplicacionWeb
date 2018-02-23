@@ -45,3 +45,10 @@
         @content;
     }
 }
+
+@mixin if-desktop-plus{
+    // De 1280 en adelante
+    @media (min-width: #{$desktop} + 1) {
+        @content;
+    }
+}
