@@ -2,6 +2,7 @@
 $main-font-family: "Cabin";
 $titles-font-family: "Roboto";
 $text-font-family: "Arial";
+$links-font-family: "Arial";
 
 // Font sizes
 $font-size-logo: 15px;
@@ -13,6 +14,7 @@ $font-size-h3: $font-size-logo + 6px;
 $font-size-h4: $font-size-logo + 3px;
 $font-size-h5: $font-size-logo + 1px;
 $font-size-h6: $font-size-logo;
+$font-size-links: $font-size-logo - 5px;
 
 // Base colors
 $navy-blue-dark: rgb(11, 17, 27);

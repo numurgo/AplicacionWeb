@@ -1,109 +1,146 @@
+.detail {
+   /* display: flex;
+    flex-direction: column; */
 
-.artist-intro {
-    width: 100%;
-    height: 67%;
-    top: 0;
-
-    .fondo {
+    .artist-intro {
         width: 100%;
-        height: 100%;
-        z-index: 0;
+        height: 67%;
+        top: 0;
+        .fondo {
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        .artist-info {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            align-items: center;
+            
+            .profile {
+                position: absolute;
+                top: 27%;
+                left: 47%;
+                width: 57px;
+                height: 57px;
+                border-radius: 80px;
+                margin-bottom: 5px;
+            }
+            .name {
+                position: absolute;
+                top: 40%;
+                left: 31%;
+                font-family: $main-font-family;
+                font-size: $font-size-h3;
+                text-transform: uppercase;
+                color: $silver;
+                margin-bottom: 7px;
+            }
+            .work {
+                position: absolute;
+                top: 45%;
+                left: 27%;
+                font-family: $text-font-family;
+                font-size: $font-size-small;
+                color: $silver;
+                margin-bottom: 5px;
+            }
+            .country {
+                position: absolute;
+                top: 47%;
+                left: 39%;
+                font-family: $text-font-family;
+                font-size: $font-size-small;
+                color: $silver;
+                margin-bottom: 5px;
+            }
+        }
     }
-
-    .artist-info {
+    .barra {
         display: flex;
-        justify-content: flex-start;
-        flex-direction: column;
-        align-items: center; 
-        z-index: initial;
-
-        .profile {
-            position: absolute;
-            top: 27%;
-            left: 47%;
-            width: 57px;
-            height: 57px;
-            border-radius: 80px;
-            margin-bottom: 5px;         
+        justify-content: center;
+        font-family: $main-font-family;
+        font-size: $font-size-small;
+        background-color: $navy-blue-dark;
+        color: $leather;
+        margin: 5px 10% 10px 10%;
+        .follow {
+            box-sizing: border-box;
+            margin: 5px;
         }
-
-        .name {
-            position: absolute;
-            top: 40%;
-            left: 31%;
-            font-family: $main-font-family;
-            font-size: $font-size-h3;
-            text-transform: uppercase;
-            color: $silver; 
-            margin-bottom: 7px;
+        input {
+            width: 17px;
+            height: 17px;
+            margin-left: 13px;
+            margin-top: 2px;
+            margin-bottom: 10px;
         }
-
-        .work {
-            position: absolute;
-            top: 45%;
-            left: 27%;
-            font-family: $text-font-family;
-            font-size: $font-size-small;
-            color: $silver; 
+    }
+    .images {
+        width: 100%;
+        height: 200px;
+        .portfolio1 {
+            box-sizing: border-box;
+            width: 110px;
+            height: 170px;
             margin-bottom: 5px;
         }
-
-        .country {
-            position: absolute;
-            top: 47%;
-            left: 39%;
-            font-family: $text-font-family;
-            font-size: $font-size-small;
-            color: $silver; 
+        .portfolio2 {
+            box-sizing: border-box;
+            width: calc(50% - 10px);
             margin-bottom: 5px;
         }
     }
-}
-
-.barra {
-    display: flex;
-    justify-content: center;
-    font-family: $main-font-family;
-    font-size: $font-size-small;
-    background-color: $navy-blue-dark;
-    color: $leather;
-    margin: 5px 10% 10px 10%;
-
-    .follow {
+    .artist-links {
+        display: flex;
         box-sizing: border-box;
-        margin: 5px;
-    }
-
-    input {
-        width: 17px;
-        height: 17px;
-        margin-left: 13px;
-        margin-top: 2px;
+        margin-top: 125px;
         margin-bottom: 10px;
+       
+        a {
+            display: flex;
+            flex-direction: row;
+            font-family: $links-font-family;
+            font-size: $font-size-links;
+            margin: 5px;
+            
+        }
+
+        a: hover {
+            color: $coral;
+        }
     }
-}
 
-.images {
-    width: 100%;
-    height: 200px;
-
-    .portfolio1 {
+    .formulario {
+        background-color: $navy-blue-dark;
         box-sizing: border-box;
-        width: 110px;
-        height: 170px;
-        margin-bottom: 5px;
-    }
+        padding-top: 10px;
+        padding-left: 5px;
+        p {
+            display: flex;
+            justify-content: flex-start;
+            margin-left: 5px;
+            margin-bottom: 8px;
+        }
+        textarea {
+            display: flex;
+            justify-content: flex-start;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            background-color: $navy-blue;
+            border-color: $leather;
+            border-radius: 10px;
+        }
 
-    .portfolio2 {
-        box-sizing: border-box;
-        width: calc(50% - 10px);
-        margin-bottom: 10px;
+        input {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            margin-left: 10px;
+            background-color: $navy-blue;
+            border-color: $leather;
+            border-radius: 5px;
+        }
     }
-}
-
-.artist-links {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    margin-top: 130px;
+    
 }
