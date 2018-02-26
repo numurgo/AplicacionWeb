@@ -2,7 +2,7 @@
 .footer {
     box-sizing: border-box;
     background: $navy-blue-dark;
-    padding: 10px;
+    padding: 14px;
     color: $eggshell;
     bottom: 0;
     width: 100%;
@@ -21,6 +21,6 @@
 
     .rights-footer {
         font-family: 'Roboto';
-        font-size: $font-size-small;
+        font-size: $font-size-links;
     }
 }

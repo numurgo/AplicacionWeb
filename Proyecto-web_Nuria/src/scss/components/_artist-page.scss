@@ -1,3 +1,11 @@
+@keyframes profile {
+	0%  {width: 57px; height: 57px;}
+	25% {width: 65px; height: 65px;}
+	50% {width: 57px; height: 57px;}
+	75% {width: 65px; height: 65px;}
+
+}
+
 .detail {
    /* display: flex;
     flex-direction: column; */
@@ -13,42 +21,37 @@
         }
         .artist-info {
             display: flex;
-            justify-content: flex-start;
             flex-direction: column;
             align-items: center;
             
             .profile {
-                position: absolute;
-                top: 27%;
-                left: 47%;
+                display: flex;
                 width: 57px;
                 height: 57px;
                 border-radius: 80px;
                 margin-bottom: 5px;
+                
+
+                &:hover {
+                    animation-name: profile;
+                    animation-duration: 0.7s;
+                }
             }
             .name {
-                position: absolute;
-                top: 40%;
-                left: 31%;
                 font-family: $main-font-family;
                 font-size: $font-size-h3;
                 text-transform: uppercase;
+                font-weight: bold;
                 color: $silver;
                 margin-bottom: 7px;
             }
             .work {
-                position: absolute;
-                top: 45%;
-                left: 27%;
                 font-family: $text-font-family;
                 font-size: $font-size-small;
                 color: $silver;
                 margin-bottom: 5px;
             }
             .country {
-                position: absolute;
-                top: 47%;
-                left: 39%;
                 font-family: $text-font-family;
                 font-size: $font-size-small;
                 color: $silver;
@@ -74,6 +77,11 @@
             margin-left: 13px;
             margin-top: 2px;
             margin-bottom: 10px;
+            transition: transform 0.5s;
+
+            &:active {
+                transform: rotate(360deg);
+            }
         }
     }
     .images {
@@ -81,21 +89,25 @@
         height: 200px;
         .portfolio1 {
             box-sizing: border-box;
-            width: 110px;
+            width: 30%;
             height: 170px;
+            margin: 2px;
             margin-bottom: 5px;
         }
         .portfolio2 {
             box-sizing: border-box;
             width: calc(50% - 10px);
             margin-bottom: 5px;
+            padding: 2px;
+        
         }
     }
     .artist-links {
         display: flex;
         box-sizing: border-box;
-        margin-top: 125px;
+        margin-top: 35%;
         margin-bottom: 10px;
+        justify-content: center;
        
         a {
             display: flex;
@@ -106,7 +118,7 @@
             
         }
 
-        a: hover {
+        a:hover {
             color: $coral;
         }
     }
@@ -130,17 +142,30 @@
             background-color: $navy-blue;
             border-color: $leather;
             border-radius: 10px;
+            color: $eggshell;
         }
 
         input {
-            display: flex;
-            justify-content: flex-start;
-            flex-direction: row;
-            margin-left: 10px;
+            margin-left: 5px;
             background-color: $navy-blue;
             border-color: $leather;
             border-radius: 5px;
+            margin-bottom: 18px;
+        }
+
+        input#button {
+            background-color: $leather;
         }
     }
     
+    
+    .back {
+        display: flex;
+        justify-content: flex-end;
+        margin: 5px;
+        margin-right: 10px;
+        color: $silver;
+
+    }
+   
 }
