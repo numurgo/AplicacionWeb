@@ -17,10 +17,23 @@
         text-align: center;
         margin-right: 20px;
         margin-left: 10px;
+
+        @include if-desktop-plus {
+            font-size: $font-size-h4;
+        }
+
          }
 
     .rights-footer {
         font-family: 'Roboto';
         font-size: $font-size-links;
+
+        @include if-desktop-plus {
+            font-size: $font-size-logo;
+        }
+    }
+
+    @include if-desktop-plus {
+        padding: 25px;
     }
 }

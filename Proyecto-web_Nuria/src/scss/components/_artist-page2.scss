@@ -1,0 +1,114 @@
+
+.detail {
+    
+
+    .artist-intro2 {
+        width: 100%;
+        height: 310px;
+        background-image: url(../img/gretelusky3.png);      
+        background-size: 100% 100%;
+ 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        padding-bottom: 20px; 
+ 
+        @include if-mobile-landscape {
+         height: 400px;
+      }
+ 
+        @include if-tablet-portrait {
+         height: 480px;           
+        }
+ 
+        @include if-desktop {
+         height: 550px;  
+         padding-bottom: 40px;          
+        }
+ 
+        @include if-desktop-plus {
+         height: 720px;  
+         padding-bottom: 60px;          
+        }
+       
+         .profile {
+             display: relative;
+             top: 200px;
+             width: 57px;
+             height: 57px;
+             border-radius: 80px;
+             margin-bottom: 5px;                          
+         
+             &:hover {
+                 animation-name: profile;
+                 animation-duration: 0.7s;
+             }
+ 
+             @include if-desktop {
+                 width: 70px;
+                 height: 70px; 
+                 margin-bottom: 20px;        
+                }
+ 
+             @include if-desktop-plus {
+                 width: 90px;
+                 height: 90px;        
+                }
+         }
+         .name {
+             font-family: $main-font-family;
+             font-size: $font-size-h3;
+             text-transform: uppercase;
+             font-weight: bold;
+             color: $silver;
+             margin-bottom: 7px;
+ 
+             @include if-mobile-landscape {
+                 font-size: $font-size-h2;
+              }
+ 
+             @include if-desktop {
+                 font-size: $font-size-h1;
+                 margin-bottom: 12px;      
+                }
+ 
+             @include if-desktop-plus {
+                 font-size: $font-size-more-large;
+                }
+         }
+         .work {
+             font-family: $text-font-family;
+             font-size: $font-size-small;
+             color: $silver;
+             margin-bottom: 5px;
+ 
+             @include if-mobile-landscape {
+                 font-size: $font-size-logo;
+              }
+ 
+             @include if-desktop {
+                 font-size: $font-size-h4;
+                 margin-bottom: 8px;      
+                }
+             @include if-desktop-plus{
+                 font-size: $font-size-h2;
+                 margin-bottom: 12px;      
+                }
+         }
+         .country {
+            @extend .work;
+ 
+             @include if-mobile-landscape {
+                 font-size: $font-size-logo;
+              }
+             
+             @include if-desktop-plus{
+                 font-size: $font-size-h4;
+      
+                }
+         }
+     }
+     
+    
+}
