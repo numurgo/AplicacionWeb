@@ -7,58 +7,151 @@
 }
 
 .detail {
-   /* display: flex;
-    flex-direction: column; */
 
     .artist-intro {
-        width: 100%;
-        height: 67%;
-        top: 0;
-        .fondo {
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-        }
-        .artist-info {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            
-            .profile {
-                display: flex;
-                width: 57px;
-                height: 57px;
-                border-radius: 80px;
-                margin-bottom: 5px;
-                
+       width: 100%;
+       height: 310px;
+       background-image: url(../img/picolo4.jpg);
+       background-size: 100% 100%;
 
-                &:hover {
-                    animation-name: profile;
-                    animation-duration: 0.7s;
-                }
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: flex-start;
+       padding-top: 20px; 
+
+       @include if-mobile-landscape {
+        height: 400px;
+     }
+
+       @include if-tablet-portrait {
+        height: 480px;           
+       }
+
+       @include if-desktop {
+        height: 550px;  
+        padding-top: 40px;          
+       }
+
+       @include if-desktop-plus {
+        height: 720px;  
+        padding-top: 60px;          
+       }
+      
+        .profile {
+            display: relative;
+            top: 200px;
+            width: 57px;
+            height: 57px;
+            border-radius: 80px;
+            margin-bottom: 5px;                          
+        
+            &:hover {
+                animation-name: profile;
+                animation-duration: 0.7s;
             }
-            .name {
-                font-family: $main-font-family;
-                font-size: $font-size-h3;
-                text-transform: uppercase;
-                font-weight: bold;
-                color: $silver;
-                margin-bottom: 7px;
-            }
-            .work {
-                font-family: $text-font-family;
-                font-size: $font-size-small;
-                color: $silver;
-                margin-bottom: 5px;
-            }
-            .country {
-                font-family: $text-font-family;
-                font-size: $font-size-small;
-                color: $silver;
-                margin-bottom: 5px;
-            }
+
+            @include if-desktop {
+                width: 70px;
+                height: 70px; 
+                margin-bottom: 20px;        
+               }
+
+            @include if-desktop-plus {
+                width: 90px;
+                height: 90px;        
+               }
+        }
+        .name {
+            font-family: $main-font-family;
+            font-size: $font-size-h3;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: $silver;
+            margin-bottom: 7px;
+
+            @include if-mobile-landscape {
+                font-size: $font-size-h2;
+             }
+
+            @include if-desktop {
+                font-size: $font-size-h1;
+                margin-bottom: 12px;      
+               }
+
+            @include if-desktop-plus {
+                font-size: $font-size-more-large;
+               }
+        }
+        .work {
+            font-family: $text-font-family;
+            font-size: $font-size-small;
+            color: $silver;
+            margin-bottom: 5px;
+
+            @include if-mobile-landscape {
+                font-size: $font-size-logo;
+             }
+
+            @include if-desktop {
+                font-size: $font-size-h4;
+                margin-bottom: 8px;      
+               }
+            @include if-desktop-plus{
+                font-size: $font-size-h2;
+                margin-bottom: 12px;      
+               }
+        }
+        .country {
+            font-family: $text-font-family;
+            font-size: $font-size-small;
+            color: $silver;
+            margin-bottom: 5px;
+
+            @include if-mobile-landscape {
+                font-size: $font-size-logo;
+             }
+            
+            @include if-desktop-plus{
+                font-size: $font-size-h4;
+     
+               }
         }
     }
+
+    .artist-info {
+        margin: 10px;
+        padding: 5px;
+        line-height: 1.5em;
+        text-align: center;
+
+        span {
+            font-weight: bold;
+            color: $leather;
+        }
+        #cursiva {
+            font-style: italic;
+        }
+
+        @include if-mobile-landscape {
+            margin: 20px;
+            padding: 5px 15px;
+            line-height: 1.7em;
+            font-size: $font-size-logo;
+         }
+
+        @include if-desktop {
+            font-size: $font-size-h5;
+            padding: 5px 35px; 
+            line-height: 1.5em;     
+           }
+
+        @include if-desktop-plus {
+            padding: 5px 12%;         
+           }
+    }
+
+
     .barra {
         display: flex;
         justify-content: center;
@@ -66,10 +159,32 @@
         font-size: $font-size-small;
         background-color: $navy-blue-dark;
         color: $leather;
-        margin: 5px 10% 10px 10%;
+        margin: 10px 8% 20px 8%;
+
+        @include if-mobile-landscape {
+            margin: 7px 10% 20px 10%;
+            font-size: $font-size-logo;
+         }
+
+        @include if-tablet-portrait {
+            margin: 7px 15% 20px 15%;        
+           }
+
+        @include if-desktop {
+            font-size: $font-size-h5;  
+           }
+
+        @include if-desktop-plus {
+            margin: 7px 18% 20px 18%;          
+           }
+
         .follow {
             box-sizing: border-box;
             margin: 5px;
+
+            @include if-mobile-landscape {
+                margin-right: 40px;
+             }
         }
         input {
             width: 17px;
@@ -87,28 +202,72 @@
     .images {
         width: 100%;
         height: 200px;
+
+        @include if-mobile-landscape {
+            height: 400px;
+         }
+
         .portfolio1 {
             box-sizing: border-box;
             width: 30%;
+            max-width: 600px;
             height: 170px;
             margin: 2px;
             margin-bottom: 5px;
+
+            @include if-mobile-landscape {
+                height: 310px;
+             }
+
+            @include if-desktop {
+                height: 380px;
+                margin: 5px;
+            }
+
+            @include if-desktop-plus {
+                height: 500px;
+                margin: 5px;
+            }
         }
         .portfolio2 {
             box-sizing: border-box;
             width: calc(50% - 10px);
+            max-width: 1000px;
             margin-bottom: 5px;
             padding: 2px;
+
+            @include if-desktop {
+                width: calc(50% - 20px);
+                margin: 5px;
+            }
         
         }
     }
     .artist-links {
         display: flex;
         box-sizing: border-box;
-        margin-top: 35%;
-        margin-bottom: 10px;
+        margin-top: 37%;
+        margin-bottom: 15px;
         justify-content: center;
        
+        @include if-mobile-landscape {
+            margin-top: 29%;
+            margin-bottom: 20px;
+         }
+
+        @include if-tablet-portrait {
+            margin-top: 31%;
+         }
+
+        @include if-desktop {
+            margin-top: 40%;
+            margin-bottom: 30px;
+        }
+
+        @include if-desktop-plus {
+            margin-top: 50%;
+        }
+
         a {
             display: flex;
             flex-direction: row;
@@ -116,6 +275,18 @@
             font-size: $font-size-links;
             margin: 5px;
             
+            @include if-mobile-landscape {
+                font-size: $font-size-logo;
+             }
+
+            @include if-tablet-portrait {
+                margin-left: 30px;
+             }
+
+            @include if-desktop {
+                font-size: $font-size-h4;
+                margin-left: 40px;
+            }
         }
 
         a:hover {
@@ -133,16 +304,49 @@
             justify-content: flex-start;
             margin-left: 5px;
             margin-bottom: 8px;
+
+            @include if-mobile-landscape {
+                font-size: $font-size-logo;
+                margin-bottom: 12px;
+                margin-left: 8px;
+             }
+
+            @include if-desktop {
+                font-size: $font-size-h4;
+                margin-left: 20px;
+            }
+
+            @include if-desktop-plus {
+                margin-left: 40px;
+                padding: 10px;
+            }
         }
         textarea {
             display: flex;
             justify-content: flex-start;
+            width: 90%;
+            height: 80px;
             margin-left: 10px;
             margin-bottom: 10px;
             background-color: $navy-blue;
             border-color: $leather;
             border-radius: 10px;
             color: $eggshell;
+
+            @include if-mobile-landscape {
+                height: 120px;
+             }
+
+            @include if-desktop {
+                height: 170px;
+                margin-left: 27px;
+                margin-bottom: 30px;
+            }
+
+            @include if-desktop-plus {
+                height: 200px;
+                margin-left: 45px;
+            }
         }
 
         input {
@@ -151,10 +355,21 @@
             border-color: $leather;
             border-radius: 5px;
             margin-bottom: 18px;
+
+            @include if-mobile-landscape {
+                text-align: left;
+                width: 30%;
+                margin-left: 10px;
+             }
         }
 
         input#button {
             background-color: $leather;
+
+            @include if-mobile-landscape {
+                width: 20%;
+                margin-left: 10px;
+             }
         }
     }
     
