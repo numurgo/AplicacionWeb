@@ -24,10 +24,9 @@
         margin-right: 20px;
         margin-left: 10px;
 
-        @include if-desktop {
+        @include if-desktop-plus {
             margin-left: 15px;
             font-size: $font-size-h3;
-            padding: 17px
         }
         }
         
